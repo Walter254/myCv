@@ -157,3 +157,14 @@ for (let i = 0; i < navigationLinks.length; i++) {
 
   });
 }
+
+function toggleText(element) {
+  const title = element.parentElement;
+  if (title.classList.contains('expanded')) {
+    title.classList.remove('expanded');
+    element.textContent = '...read more';
+  } else {
+    title.classList.add('expanded');
+    element.textContent = '...read less';
+  }
+}
