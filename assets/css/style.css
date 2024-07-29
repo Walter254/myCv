@@ -1570,14 +1570,14 @@ textarea.form-input::-webkit-resizer { display: none; }
 
 
   /**
-   * #PORTFOLIO, BLOG
+   * #PORTFOLIO, FEATURED
    */
 
-  .project-img, .blog-banner-box { border-radius: 16px; }
+  .project-img, .featured-banner-box { border-radius: 16px; }
 
-  .blog-posts-list { gap: 30px; }
+  .featured-posts-list { gap: 30px; }
 
-  .blog-content { padding: 25px; }
+  .featured-content { padding: 25px; }
 
 
 
