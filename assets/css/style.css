@@ -292,6 +292,11 @@ article.active {
   z-index: -1;
 }
 
+a img {
+  max-width: 100%;
+  height: auto;
+  display: block; /* Ensures there's no extra space below the image */
+}
 
 
 
