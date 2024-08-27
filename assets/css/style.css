@@ -1039,7 +1039,10 @@ main {
   #FEATURED
 \*-----------------------------------*/
 
-.featured-posts { margin-bottom: 10px; }
+.featured-posts {
+  margin-bottom: 10px;
+  
+}
 
 .featured-posts-list {
   display: grid;
@@ -1125,12 +1128,35 @@ main {
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   overflow: hidden;
   margin-bottom: 16px;
-  width: 560px; /* Match iframe width */
+  width: 100%; /* Make it take full width initially */
+  max-width: 560px; /* Limit the maximum width to maintain design */
+  padding: 16px; /* Add padding for inner spacing */
+  box-sizing: border-box; /* Include padding and border in element's width and height */
 }
 
 .featured-content {
   width: 100%;
-  height: 315px; /* Match iframe height */
+  height: auto; /* Adjust automatically based on content */
+}
+
+.featured-post-item {
+  flex: 1 1 100%; /* Flex-grow, flex-shrink, flex-basis for responsive resizing */
+  display: flex;
+  flex-direction: column; /* Stack content vertically */
+  align-items: center; /* Center content horizontally */
+  justify-content: center; /* Center content vertically */
+}
+
+@media (min-width: 768px) {
+  .featured-post-item {
+    flex: 1 1 calc(50% - 20px); /* Two columns layout with gap */
+  }
+}
+
+@media (min-width: 1024px) {
+  .featured-post-item {
+    flex: 1 1 calc(33.333% - 20px); /* Three columns layout with gap */
+  }
 }
 
 .featured-content iframe {
