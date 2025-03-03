@@ -724,6 +724,20 @@
       -->
 
       <article class="featured" data-page="featured">
+        <style>
+          .featured-content img,
+          .featured-content iframe {
+            border-radius: 8px; /* Smooth borders for images and iframes */
+            transition: transform 0.3s ease; /* Smooth transition for hover effect */
+            max-width: 100%; /* Ensure images and iframes do not exceed their container width */
+            height: auto; /* Maintain aspect ratio */
+          }
+
+          .featured-content img:hover,
+          .featured-content iframe:hover {
+            transform: scale(1.05); /* Slightly enlarge the image or video on hover */
+          }
+        </style>
 
         <header>
           <h2 class="h2 article-title">Featured</h2>
