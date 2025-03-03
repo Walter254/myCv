@@ -729,6 +729,8 @@
           .featured-content iframe {
             border-radius: 8px; /* Smooth borders for images and iframes */
             transition: transform 0.3s ease; /* Smooth transition for hover effect */
+            max-width: 100%; /* Ensure images and iframes do not exceed their container width */
+            height: auto; /* Maintain aspect ratio */
           }
 
           .featured-content img:hover,
