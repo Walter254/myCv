@@ -725,12 +725,38 @@
 
       <article class="featured" data-page="featured">
         <style>
+          .featured-posts-list {
+            display: flex; /* Use Flexbox for layout */
+            flex-wrap: wrap; /* Allow items to wrap to the next line */
+            justify-content: space-between; /* Space out items evenly */
+            gap: 1rem; /* Add space between items */
+          }
+
+          .featured-post-item {
+            flex: 1 1 calc(50% - 1rem); /* Allow items to grow and shrink, with a base width of 50% minus gap */
+            max-width: calc(50% - 1rem); /* Ensure items do not exceed 50% width */
+            box-sizing: border-box; /* Include padding and border in the element's total width and height */
+          }
+
+          @media (max-width: 600px) {
+            .featured-post-item {
+              flex: 1 1 100%; /* On small screens, items take full width */
+              max-width: 100%; /* Ensure items do not exceed 100% width */
+            }
+          }
+
+          .featured-content {
+            overflow: hidden; /* Prevent overflow of child elements */
+          }
+
           .featured-content img,
           .featured-content iframe {
             border-radius: 8px; /* Smooth borders for images and iframes */
             transition: transform 0.3s ease; /* Smooth transition for hover effect */
             max-width: 100%; /* Ensure images and iframes do not exceed their container width */
             height: auto; /* Maintain aspect ratio */
+            display: block; /* Ensure images are treated as block elements */
+            object-fit: cover; /* Ensure images cover the container without distortion */
           }
 
           .featured-content img:hover,
