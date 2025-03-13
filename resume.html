@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Walter Wagude - Resume</title>
+  <link rel="shortcut icon" href="./assets/images/logo1.png" type="image/x-icon">
+  <link rel="stylesheet" href="./assets/css/style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-HN3ZBM1FNZ"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-HN3ZBM1FNZ');
+  </script>
+</head>
+<body>
+
+  <main>
+
+    <aside class="sidebar" data-sidebar>
+      <div class="sidebar-info">
+        <figure class="avatar-box">
+          <img src="./assets/images/my-avatar-final.png" alt="Walter Wagude" width="80">
+        </figure>
+        <div class="info-content">
+          <h1 class="name" title="Walter Wagude">Walter Wagude</h1>
+          <p class="title">Full Stack Engineer</p>
+        </div>
+        <button class="info_more-btn" data-sidebar-btn>
+          <span>Show Contacts</span>
+          <ion-icon name="chevron-down"></ion-icon>
+        </button>
+      </div>
+      <div class="sidebar-info_more">
+        <div class="separator"></div>
+        <ul class="contacts-list">
+          <li class="contact-item">
+            <div class="icon-box">
+              <ion-icon name="mail-outline"></ion-icon>
+            </div>
+            <div class="contact-info">
+              <p class="contact-title">Email</p>
+              <a href="mailto:wagudewalter2@gmail.com" class="contact-link">wagudewalter2@gmail.com</a>
+            </div>
+          </li>
+          <li class="contact-item">
+            <div class="icon-box">
+              <ion-icon name="phone-portrait-outline"></ion-icon>
+            </div>
+            <div class="contact-info">
+              <p class="contact-title">Phone</p>
+              <a href="tel:+12679090994" class="contact-link">+1 (267) 909-0994</a>
+            </div>
+          </li>
+          <li class="contact-item">
+            <div class="icon-box">
+              <ion-icon name="calendar-outline"></ion-icon>
+            </div>
+            <div class="contact-info">
+              <p class="contact-title">Birthday</p>
+              <time datetime="1982-06-23">February 19, 2002</time>
+            </div>
+          </li>
+          <li class="contact-item">
+            <div class="icon-box">
+              <ion-icon name="location-outline"></ion-icon>
+            </div>
+            <div class="contact-info">
+              <p class="contact-title">Location</p>
+              <address>Boston, Massachusetts, USA</address>
+            </div>
+          </li>
+        </ul>
+        <div class="separator"></div>
+        <ul class="social-list">
+          <li class="social-item">
+            <a href="https://www.linkedin.com/in/wagudewalter/" class="social-link" target="_blank">
+              <ion-icon name="logo-linkedin"></ion-icon>
+            </a>
+          </li>
+          <li class="social-item">
+            <a href="https://github.com/Walter254" class="social-link" target="_blank">
+              <ion-icon name="logo-github"></ion-icon>
+            </a>
+          </li>
+          <li class="social-item">
+            <a href="#" class="social-link" target="_blank">
+              <ion-icon name="logo-instagram"></ion-icon>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </aside>
+
+    <div class="main-content">
+
+      <nav class="navbar">
+        <ul class="navbar-list">
+          <li class="navbar-item">
+            <a href="about.html" class="navbar-link" data-nav-link>About</a>
+          </li>
+          <li class="navbar-item">
+            <a href="resume.html" class="navbar-link active" data-nav-link>Resume</a>
+          </li>
+          <li class="navbar-item">
+            <a href="portfolio.html" class="navbar-link" data-nav-link>Portfolio</a>
+          </li>
+          <li class="navbar-item">
+            <a href="featured.html" class="navbar-link" data-nav-link>Featured</a>
+          </li>
+          <li class="navbar-item">
+            <a href="contact.html" class="navbar-link" data-nav-link>Contact</a>
+          </li>
+        </ul>
+      </nav>
+
+      <article class="resume active" data-page="resume">
+        <header>
+          <h2 class="h2 article-title">Resume</h2>
+        </header>
+        <section class="pdf-viewer">
+          <iframe src="./Walter_Owino_Wagunde_Resume_2025.pdf" width="100%" height="600px" style="border: none;">
+            This browser does not support PDFs. Please download the PDF to view it: <a href="./Walter_Owino_Wagunde_Resume_2025.pdf">Download PDF</a>.
+          </iframe>
+        </section>
+        <section class="filter-select-box">
+          <button class="filter-select" data-select>
+            <div class="select-value" data-selecct-value>Select section</div>
+            <div class="select-icon">
+              <ion-icon name="chevron-down"></ion-icon>
+            </div>
+          </button>
+          <ul class="select-list">
+            <li class="select-item">
+              <button data-select-item>All</button>
+            </li>
+            <li class="select-item">
+              <button data-select-item>Education</button>
+            </li>
+            <li class="select-item">
+              <button data-select-item>Experience</button>
+            </li>
+            <li class="select-item">
+              <button data-select-item>Skills</button>
+            </li>
+          </ul>
+        </section>
+        <section class="resume-section" data-filter-item data-category="education">
+          <!-- Education content here -->
+        </section>
+        <section class="resume-section" data-filter-item data-category="experience">
+          <!-- Experience content here -->
+        </section>
+        <section class="resume-section" data-filter-item data-category="skills">
+          <h3 class="h3 skills-title">Essential Skills</h3>
+          <ul class="skills-list content-card">
+            <li class="skills-item">
+              <div class="title-wrapper">
+                <h5 class="h5">Python</h5>
+                <data value="100">100%</data>
+              </div>
+              <div class="skill-progress-bg">
+                <div class="skill-progress-fill" style="width: 100%;"></div>
+              </div>
+            </li>
+            <li class="skills-item">
+              <div class="title-wrapper">
+                <h5 class="h5">C++</h5>
+                <data value="90">90%</data>
+              </div>
+              <div class="skill-progress-bg">
+                <div class="skill-progress-fill" style="width: 90%;"></div>
+              </div>
+            </li>
+            <li class="skills-item">
+              <div class="title-wrapper">
+                <h5 class="h5">SQL</h5>
+                <data value="90">90%</data>
+              </div>
+              <div class="skill-progress-bg">
+                <div class="skill-progress-fill" style="width: 90%;"></div>
+              </div>
+            </li>
+            <li class="skills-item">
+              <div class="title-wrapper">
+                <h5 class="h5">JavaScript</h5>
+                <data value="95">95%</data>
+              </div>
+              <div class="skill-progress-bg">
+                <div class="skill-progress-fill" style="width: 95%;"></div>
+              </div>
+            </li>
+          </ul>
+        </section>
+      </article>
+
+    </div>
+
+  </main>
+
+  <script src="./assets/js/script.js"></script>
+  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      const select = document.querySelector("[data-select]");
+      const selectItems = document.querySelectorAll("[data-select-item]");
+      const selectValue = document.querySelector("[data-selecct-value]");
+      const filterItems = document.querySelectorAll("[data-filter-item]");
+
+      select.addEventListener("click", function () {
+        this.classList.toggle('active');
+      });
+
+      selectItems.forEach(item => {
+        item.addEventListener("click", function () {
+          const selectedValue = this.innerText.toLowerCase();
+          selectValue.innerText = this.innerText;
+          select.classList.remove('active');
+          filterFunc(selectedValue);
+        });
+      });
+
+      const filterFunc = function (selectedValue) {
+        filterItems.forEach(item => {
+          const category = item.getAttribute('data-category').toLowerCase();
+          if (selectedValue === 'all' || category === selectedValue) {
+            item.style.display = 'block';
+          } else {
+            item.style.display = 'none';
+          }
+        });
+      };
+    });
+  </script>
+
+</body>
+</html> 

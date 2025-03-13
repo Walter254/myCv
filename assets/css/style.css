@@ -2001,3 +2001,18 @@ textarea.form-input::-webkit-resizer { display: none; }
   .timeline-text { max-width: 700px; }
 
 }
+
+@media (max-width: 768px) {
+  .filter-select-box {
+    width: 100%;
+  }
+
+  .filter-select {
+    width: 100%;
+    text-align: left;
+  }
+
+  .select-list {
+    width: 100%;
+  }
+}
