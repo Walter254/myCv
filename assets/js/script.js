@@ -168,3 +168,4 @@ function toggleText(element) {
     element.textContent = '...read less';
   }
 }
+
