@@ -157,13 +157,14 @@
         <section class="resume-section" data-filter-item data-category="experience">
           <!-- Experience content here -->
         </section>
+        <br/>
         <section class="resume-section" data-filter-item data-category="skills">
           <h3 class="h3 skills-title">Essential Skills</h3>
           <ul class="skills-list content-card">
             <li class="skills-item">
               <div class="title-wrapper">
                 <h5 class="h5">Python</h5>
-                <data value="100">100%</data>
+                <data value="100">95%</data>
               </div>
               <div class="skill-progress-bg">
                 <div class="skill-progress-fill" style="width: 100%;"></div>
@@ -171,7 +172,7 @@
             </li>
             <li class="skills-item">
               <div class="title-wrapper">
-                <h5 class="h5">C++</h5>
+                <h5 class="h5">React, TypeScript & JavaScript</h5>
                 <data value="90">90%</data>
               </div>
               <div class="skill-progress-bg">
@@ -180,20 +181,29 @@
             </li>
             <li class="skills-item">
               <div class="title-wrapper">
-                <h5 class="h5">SQL</h5>
-                <data value="90">90%</data>
+                <h5 class="h5">C++, Swift, SwiftUI</h5>
+                <data value="85">85%</data>
               </div>
               <div class="skill-progress-bg">
-                <div class="skill-progress-fill" style="width: 90%;"></div>
+                <div class="skill-progress-fill" style="width: 85%;"></div>
               </div>
             </li>
             <li class="skills-item">
               <div class="title-wrapper">
-                <h5 class="h5">JavaScript</h5>
-                <data value="95">95%</data>
+                <h5 class="h5">AWS, Azure, GCP</h5>
+                <data value="85">85%</data>
               </div>
               <div class="skill-progress-bg">
-                <div class="skill-progress-fill" style="width: 95%;"></div>
+                <div class="skill-progress-fill" style="width: 85%;"></div>
+              </div>
+            </li>
+            <li class="skills-item">
+              <div class="title-wrapper">
+                <h5 class="h5">MongoDB, Postgress</h5>
+                <data value="85">85%</data>
+              </div>
+              <div class="skill-progress-bg">
+                <div class="skill-progress-fill" style="width: 85%;"></div>
               </div>
             </li>
           </ul>
@@ -238,6 +248,23 @@
           }
         });
       };
+
+      const skillsItems = document.querySelectorAll('.skills-item');
+
+      const observer = new IntersectionObserver(entries => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            const skillFill = entry.target.querySelector('.skill-progress-fill');
+            const skillValue = entry.target.querySelector('data').getAttribute('value');
+            skillFill.style.width = skillValue + '%';
+            entry.target.classList.add('visible');
+          }
+        });
+      }, { threshold: 0.1 });
+
+      skillsItems.forEach(item => {
+        observer.observe(item);
+      });
     });
   </script>
 
