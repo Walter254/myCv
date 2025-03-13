@@ -129,34 +129,7 @@
             This browser does not support PDFs. Please download the PDF to view it: <a href="./Walter_Owino_Wagunde_Resume_2025.pdf">Download PDF</a>.
           </iframe>
         </section>
-        <section class="filter-select-box">
-          <button class="filter-select" data-select>
-            <div class="select-value" data-selecct-value>Select section</div>
-            <div class="select-icon">
-              <ion-icon name="chevron-down"></ion-icon>
-            </div>
-          </button>
-          <ul class="select-list">
-            <li class="select-item">
-              <button data-select-item>All</button>
-            </li>
-            <li class="select-item">
-              <button data-select-item>Education</button>
-            </li>
-            <li class="select-item">
-              <button data-select-item>Experience</button>
-            </li>
-            <li class="select-item">
-              <button data-select-item>Skills</button>
-            </li>
-          </ul>
-        </section>
-        <section class="resume-section" data-filter-item data-category="education">
-          <!-- Education content here -->
-        </section>
-        <section class="resume-section" data-filter-item data-category="experience">
-          <!-- Experience content here -->
-        </section>
+        
         <br/>
         <section class="resume-section" data-filter-item data-category="skills">
           <h3 class="h3 skills-title">Essential Skills</h3>
@@ -218,55 +191,6 @@
   <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
   <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
 
-  <script>
-    document.addEventListener('DOMContentLoaded', function() {
-      const select = document.querySelector("[data-select]");
-      const selectItems = document.querySelectorAll("[data-select-item]");
-      const selectValue = document.querySelector("[data-selecct-value]");
-      const filterItems = document.querySelectorAll("[data-filter-item]");
-
-      select.addEventListener("click", function () {
-        this.classList.toggle('active');
-      });
-
-      selectItems.forEach(item => {
-        item.addEventListener("click", function () {
-          const selectedValue = this.innerText.toLowerCase();
-          selectValue.innerText = this.innerText;
-          select.classList.remove('active');
-          filterFunc(selectedValue);
-        });
-      });
-
-      const filterFunc = function (selectedValue) {
-        filterItems.forEach(item => {
-          const category = item.getAttribute('data-category').toLowerCase();
-          if (selectedValue === 'all' || category === selectedValue) {
-            item.style.display = 'block';
-          } else {
-            item.style.display = 'none';
-          }
-        });
-      };
-
-      const skillsItems = document.querySelectorAll('.skills-item');
-
-      const observer = new IntersectionObserver(entries => {
-        entries.forEach(entry => {
-          if (entry.isIntersecting) {
-            const skillFill = entry.target.querySelector('.skill-progress-fill');
-            const skillValue = entry.target.querySelector('data').getAttribute('value');
-            skillFill.style.width = skillValue + '%';
-            entry.target.classList.add('visible');
-          }
-        });
-      }, { threshold: 0.1 });
-
-      skillsItems.forEach(item => {
-        observer.observe(item);
-      });
-    });
-  </script>
 
 </body>
 </html> 
