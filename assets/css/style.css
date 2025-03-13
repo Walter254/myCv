@@ -2016,3 +2016,15 @@ textarea.form-input::-webkit-resizer { display: none; }
     width: 100%;
   }
 }
+
+/* Hide data values */
+.skills-list .skills-item .title-wrapper data {
+  display: none; /* This will hide the data values */
+}
+
+/* Alternatively, style the data values */
+.skills-list .skills-item .title-wrapper data {
+  font-size: 0.9em; /* Adjust font size */
+  color: #666; /* Change text color */
+  margin-left: 5px; /* Add some spacing */
+}
