@@ -176,9 +176,10 @@ article {
 }
 
 .separator {
-  height: 20px;
-  margin: 20px 0;
-  background-color: #e0e0e0;
+  height: 1px;
+  margin: 18px 0;
+  background-color: var(--jet);
+  border-radius: 1px;
 }
 
 .icon-box {
@@ -1483,7 +1484,7 @@ textarea.form-input::-webkit-resizer { display: none; }
 
   .info_more-btn ion-icon { display: none; }
 
-  .separator { margin: 32px 0; }
+  .separator { margin: 22px 0; }
 
   .contacts-list { gap: 20px; }
 
@@ -1990,8 +1991,11 @@ textarea.form-input::-webkit-resizer { display: none; }
   }
 
   .separator:last-of-type {
-    margin: 15px 0;
-    opacity: 0;
+    display: none;
+  }
+
+  .sidebar-info_more .social-list {
+    margin-top: 20px;
   }
 
   .social-list { justify-content: center; }
